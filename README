@@ -1,10 +1,5 @@
-##############################################  README  ##############################################
-
-	Pentru rezolvarea temei am folosit trei functii:
-	
 • segv_handler(int, siginfo_t, void*), handler care preia datele despre semnalul SIGSEGV inregistrat
 si cauta adresa de page fault in segmentele de date din fisierul deschis in functia so_execute;
-
 • page_mapper(so_seg_t, void*), functie care se ocupa de maparea efectiva a paginilor, respectand
 cerintele de interceptare a page fault-urilor de pe pagina temei.
 	Mai intai aflu index-ul paginii pe care incerc s-o mapez pentru a accesa zona de memorie si verific
